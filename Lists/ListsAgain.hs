@@ -4,7 +4,8 @@ module ListsAgain where
 
 insertAt :: Integral b => a -> [a] -> b -> [a]
 insertAt x xs i = take idx xs ++ [x] ++ drop idx xs
-  where idx = fromIntegral (i - 1)
+  where
+    idx = fromIntegral (i - 1)
 
 range :: Integral a => a -> a -> [a]
 range x y = take (fromIntegral (y - x + 1)) $ iterate (+ 1) x
